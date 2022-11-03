@@ -1,1 +1,1 @@
-## Experiment name
+## Mathematical operations using Op-Amp.
