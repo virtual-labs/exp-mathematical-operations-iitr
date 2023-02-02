@@ -511,7 +511,7 @@ close_btn.addEventListener('click', () => {
     var left = document.getElementById("First_Data"); 
      left.style.display ="block";
 
-     var x= document.getElementById("Components");
+     var x= document.getElementById("components");
      x.style.visibility="visible";
      
      
@@ -593,7 +593,7 @@ close_btn.addEventListener('click', () => {
      var left = document.getElementById("second_insrt"); 
      left.style.display ="block";
   
-   var x= document.getElementById("Components");
+   var x= document.getElementById("components");
    x.style.visibility="visible";
     document.getElementById("resistancebutton").addEventListener("click", function(){
   	document.getElementById("resis6").innerHTML="R" +str.sub();
@@ -676,7 +676,7 @@ close_btn.addEventListener('click', () => {
           var c = document.getElementById("third_insrt"); 
           c.style.display ="block";
   
-     var x= document.getElementById("Components");
+     var x= document.getElementById("components");
    x.style.visibility="visible";
      document.getElementById("resistancebutton").addEventListener("click", function(){
   	
