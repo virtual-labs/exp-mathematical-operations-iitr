@@ -1,21 +1,23 @@
+*{
+	margin: 0;
+	padding: 0;
+}
 
 #exp-name {
     width: 1500px;
     text-align: center;
     padding: 10px;
-    height: 40px;
+    height: 20px;
     color: #2C99CE;
     font-family: 'Raleway', sans-serif;
     border-bottom: 1px solid #333;
-    font-size: 20px;
 }
-
 .left {
     padding-top: 20px;
     padding-left: 0px;
     float: left;
-    width: 1000px;
-    height: 550px;
+    width: 1120px;
+    height: 570px;
     display: block;
 }
 
@@ -37,7 +39,7 @@
     display: block;
 }
 .right_btn {
-    height: 30px;
+    height: 35px;
     width: 220px;
     font-size: 20px;
     cursor: pointer;
@@ -133,7 +135,6 @@ h1 {
 #mid {
 
     position: absolute;
-    left:6px;
     height: 470px;
     width: 1120px;
     border: 2px solid #d39538;   
@@ -295,12 +296,11 @@ a
 .components                                            /*      fieldset position  */
 {   
     display: inline-block;
-    width:200px;
+    width:260px;
     height:455px;
     border-radius: 5px;
     box-shadow: 0 16px 31px -17px rgba(0, 31, 97, 0.6);
-    background: rgb(243, 236, 236);
-    
+    background: rgb(243, 236, 236);  
     visibility: hidden;
     top:140px;
     left:1225px;
@@ -413,27 +413,27 @@ a
 {   width: 150px;
     height:40px;
     border-radius: 10px; 
-    position: absolute;
+ position:absolute; 
     margin-top: 5px;
-    margin-left:-70px;
-    z-index:1;
+    margin-left:-60px;
+   
 }
 #myrange1                                                 /*      led button   */
 {   width: 150px;
     height:40px;
     border-radius: 10px; 
-    position: absolute;
+    position:absolute; 
     margin-top:5px;
-    margin-left:20px;
-    z-index:2;
+    margin-left:25px;
+   
 }
 #myrange2                                                 /*      led button   */
 {   width: 150px;
     height:40px;
     border-radius: 10px; 
-    position: absolute;
+  position:absolute; 
     margin-top:30px;
-    margin-left:13px;
+    margin-left:15px;
 }
 #myrange3                                                 /*      led button   */
 {   width: 150px;
@@ -458,6 +458,7 @@ a
     margin-top: 16px;
     font-size: 15px;
     font-weight: bolder;
+    margin-left:40px;
 }
 
 #v2
@@ -466,6 +467,7 @@ a
     margin-top:49px;
     font-size: 15px;
     font-weight: bolder;
+    margin-left:40px;
 }
 
 #v3
@@ -474,6 +476,7 @@ a
     margin-top: 86px;
     font-size: 15px;
     font-weight: bolder;
+    margin-left:40px;
 }
 
 #v4
@@ -482,81 +485,79 @@ a
     margin-top: 83px;
     font-size: 15px;
     font-weight: bolder;
+    margin-left:40px;
 }
+.bottom {
+    position: absolute;
+
+    height: 60px;
+    text-align: center;
+    top:550px;
+    width:1120px;
+}
+
+.bottom button {
+    margin: 10px 10px 10px 10px;
+    height: 40px;
+    width: 170px;
+    font-size: 15px;
+    border: none;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    border-color: black;
+    
+}
+
 #checkbutton                                      /*      check connections buttton  */
-{   width: 200px;
-    height:40px;
+{  
     border: 2px rgb(0, 168, 8) solid;
     background: rgb(0, 168, 8);
-    border-radius: 10px;
-    position: absolute;
-    top:590px;
-    left:100px;
     font-weight: bolder;
-    font-size: 18px;
 }
 #checkbutton:hover                                  
 {
     color: rgb(0, 168, 8);
     background: white;
-    font-size: 18px;
+    font-size: 16px;
 
 }
 #startbutton                                          /*      start button   */
-{ width: 200px;
-    height:40px;
-    border: 2px rgb(0, 168, 8) solid;
-    background: rgb(0, 168, 8);
-    border-radius: 10px;
-    position: absolute;
-    top:590px;
-    left:500px;
+{  border: 2px #5433FF solid;
+    background: #5433FF;
     font-weight: bolder;
-    font-size: 18px;
 }
 #startbutton:hover
 {
-    color: rgb(0, 168, 8);
+    color: #5433FF;
     background: white;
-    font-size: 18px;
+    font-size: 16px;
 
 }
 
 #resetbutton                           /*reset button*/
-{ width: 100px;
-    height:40px;
-    border: 2px rgb(255, 54, 54) solid;
-    background: rgb(255, 54, 54);
-    border-radius: 10px;
-    position: absolute;
-    top:590px;
-    left:350px;
+{  border: 2px rgb(255, 54, 54) solid;
+    background: rgb(255, 54, 54);    
     font-weight: bolder;
-    font-size: 18px;
 
 }
 #resetbutton:hover 
 {
     color: rgb(255, 54, 54);
     background: white;
-    font-size: 18px;
+    font-size: 16px;
 
 }
 #addtable                          /*reset button*/
-{ width: 150px;
-    height:40px;
-    border: 2px rgb(255, 54, 54) solid;
-    background: rgb(255, 54, 54);
-    border-radius: 10px;
-      position: absolute;
-    top: 590px;
-    left: 750px;
-    font-size: 18px;
+{ border: 2px yellowgreen solid;
+    background: yellowgreen;
+    font-weight: bolder;
 
 }
 #addtable:hover 
 {
-    color: rgb(255, 54, 54);
+    
+    color: yellowgreen;
     background: white;
     font-size: 18px;
 
@@ -580,8 +581,7 @@ button
 }
 footer
 {
-    position: absolute;
-    
+    position: absolute;    
     font-size: 18px;
     bottom: -600px;
     width: 1518px;
@@ -592,6 +592,7 @@ footer
     color: #fff;
     background-color: #333;
     font-family: 'Raleway', sans-serif;
+    font-weight: bolder;
     /*z-index:-1;*/
   }
 
@@ -692,7 +693,7 @@ border-radius: 4px;
     width: 245px;
     height: auto;
     top:180px;
-    left: 1188px;
+    left: 1205px;
     border-radius: 5px;
     font-size: 18px;
     box-shadow: 0 16px 31px -17px rgba(0, 31, 97, 0.6);
