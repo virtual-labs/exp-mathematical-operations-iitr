@@ -9,7 +9,7 @@
 **Fig 1: Components**
 </div>
 
-### **A.** Addition
+### **A. Addition**
 
 **1.** Click on the component button to place the component on the table.  
 **2**. Make connections as per the circuit diagram or connection table.
@@ -27,7 +27,7 @@
 
 **3.** Click on **'Add to table'** button and calculate the output voltage using the formula mentioned in the figure/instructions of respective simulator to add calculations to the table.
 
-### **B.** Subtraction
+### **B. Subtraction**
 
 **1.** Click on the component button to place the component on the table.  
 **2**. Make connections as per the circuit diagram or connection table.
@@ -45,7 +45,7 @@
 
 **3.** Click on **'Add to table'** button and calculate the output voltage using the formula mentioned in the figure/instructions of respective simulator to add calculations to the table.
 
-### **C.** Multiplication by constant ( and Division when Rf < Ri)
+### **C. Multiplication by constant ( and Division when Rf < Ri)**
 
 **1.** Click on the component button to place the component on the table.  
 <div style="text-align:center"> 
