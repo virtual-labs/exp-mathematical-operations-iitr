@@ -1,13 +1,310 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<!-- Add CSS at the head of HTML file -->
-    <link rel="stylesheet" href="./css/main.css">
-</head>
-<body>
-		<!-- Your code goes here-->
+<html lang="en">
 
-	<!-- Add JS at the bottom of HTML file --> 
-        <script src="./js/main.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathematical operations using Op-Amp</title>
+   
+
+    <!--JSplumb-->
+    <link rel="stylesheet" href="css\jsplumbtoolkit-defaults.css">
+    <script src="js\jsplumb.min.js"></script>
+
+    <script src="js\jquery-latest.js"></script>
+    <script src="js\jquery-ui-latest.js"></script>
+    <script src="js\jquery.jsPlumb-1.3.9-all-min.js"></script>
+
+
+    
+    <!--jQuery-->
+    <script src="js\jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/excanvas.js"></script>
+    <script src="js/segment-display.js"></script>
+
+    <!--JS files-->
+  
+    <script src="js/graph.js"></script> 
+       
+
+    <!--CSS files-->
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+<body>
+
+  <div id="exp-name">
+    <h2 id="heading">Mathematical operations using Op-Amp</h2>
+</div>
+
+<div id="simulation">
+  <div class="left">
+
+            <div class="border" id="mid">
+
+            <div id="board">
+                      
+     <div class="ic" id="ic741" draggable="true" ><img src="images/ic.png" id="ic1" width="55px"height="45px" style="margin-top: 50px;">
+      <label style="font-size: 15px;  color: black; position: absolute; top: 157px;left:3px;"><b>1</b></label>  
+      <label style="font-size: 15px;  color: black; position: absolute; top: 157px;left:17px;"><b>2</b></label>   
+      <label style="font-size: 15px;  color: black; position: absolute; top: 157px;left:32px;"><b>3</b></label>      
+      <label style="font-size: 15px;  color: black; position: absolute; top: 157px;left:46px;"><b>4</b></label>
+      <label style="font-size: 15px;  color: black; position: absolute;top: -20px;left: 3px;"><b>8</b></label>
+      <label style="font-size: 15px;  color: black; position: absolute; top: -20px;left:17px;"><b>7</b></label>
+      <label style="font-size: 15px;  color: black; position: absolute; top: -20px;left:32px;"><b>6</b></label>     
+      <label style="font-size: 15px;  color: black; position: absolute; top: -20px;left:46px;"><b>5</b></label></div>
+             <!--         <div class="ic" id="ic7408" draggable="true"></div>-->
+                     
+   
+ 
+ 
+    <div id="resistance1" draggable="false">
+    <img src="images/resistance1.png" id="res1"  width="15px" height="45px" style="position: absolute; top: 5px; left: 3px">
+    <!--label id="resis1" style="font-size: 18px;  color: red; position: absolute; top: -82px;left:1px;">R<sub>1</sub></label-->
+    <label id="resis1" style="font-size: 18px;color: blue;position: absolute;top: 15px;left: -16px;">R<sub>1</sub></label>
+    <label id="resis1" style="font-size: 15px;color: BLACK;position: absolute;top: -70px;left: 1px;"><B>C1</B></label>
+    <label id="resis1" style="font-size: 15px;color: BLACK;position: absolute;top: 107px;left: 0px;"><B>A1</B></label>
+  	</div>
+
+    <div id="resistance2" draggable="false">
+    <img src="images/resistance1.png" id="res2" width="15px"height="45px" style="position: absolute; top: 5px; left: 4px">
+    <!--label id="resis2"style="font-size: 18px;  color: red; position: absolute; top: -82px;left:1px;">R<sub>2</sub></label-->
+    <label id="resis2" style="font-size: 18px;color: blue;position: absolute;top: 15px;left: -16px;">R<sub>2</sub></label>
+    <label id="resis2" style="font-size: 15px;color: BLACK;position: absolute;top: -70px;left: 3px;"><B>C1</B></label>
+    <label id="resis2" style="font-size: 15px;color: BLACK;position: absolute;top: 107px;left: 3px;"><B>A1</B></label>
+	  </div>
+
+
+    <div id="resistance3" draggable="false">
+    <img src="images/resistance1.png" id="res3"  width="15px"height="45px" style="position: absolute; top: 5px; left: 5px">
+    <!--label id="resis3"style="font-size: 18px;  color: red; position: absolute; top: -82px;left:1px;">R<sub>3</sub></label-->
+    <label id="resis3" style="font-size: 18px;color: blue;position: absolute;top: 15px;left: -16px;">R<sub>3</sub></label>
+    <label id="resis3" style="font-size: 15px;color: BLACK;position: absolute;top: -70px;left: 3px;"><B>C1</B></label>
+    <label id="resis3" style="font-size: 15px;color: BLACK;position: absolute;top: 107px;left: 3px;"><B>A1</B></label>
+	  </div>
+
+    <div id="resistance4" draggable="false"> 
+    <img src="images/resistance1.png" id="res4" width="15px"height="45px" style="position: absolute; top: 5px; left: 6px">
+    <!--label id="resis4" style="font-size: 18px;  color: red; position: absolute; top: -82px;left:1px;">R<sub>4</sub></label-->
+    <label id="resis4" style="font-size: 18px;color: blue;position: absolute;top: 15px;left: -16px;">R<sub>4</sub></label>
+    <label id="resis4" style="font-size: 15px;color: BLACK;position: absolute;top: -70px;left: 3px;"><B>C1</B></label>
+    <label id="resis4" style="font-size: 15px;color: BLACK;position: absolute;top: 107px;left: 3px;"><B>A1</B></label>
+	  </div>
+
+    <div id="resistance5" draggable="true">
+    <img src="images/resistance1.png" id="res5" width="15px"height="45px" style="position: absolute; top: 5px; left: 4px">
+    <!--label id="resis5" style="font-size: 18px;  color: red; position: absolute; top: -82px;left:1px;">R<sub>5</sub></label-->
+    <label id="resis5" style="font-size: 18px;color: blue;position: absolute;top: 15px;left: -16px;">R<sub>5</sub></label>
+    <label id="resis5" style="font-size: 15px;color: BLACK;position: absolute;top: -70px;left: 3px;"><B>C1</B></label>
+    <label id="resis5" style="font-size: 15px;color: BLACK;position: absolute;top: 107px;left: 3px;"><B>A1</B></label>
+	  </div>
+    
+    <div id="resistance6" draggable="true">
+    <img src="images/resistance1.png" id="res6" width="15px"height="45px" style="position: absolute; top: 5px; left: 4px">
+    <!--label id="resis6"style="font-size: 18px;  color: red; position: absolute; top: -82px;left:1px;">R<sub>6</sub></label-->
+    <label id="resis6" style="font-size: 18px;color: blue;position: absolute;top: 15px;left: -16px;">R<sub>6</sub></label>
+    <label id="resis6" style="font-size: 15px;color: BLACK;position: absolute;top: -70px;left: 3px;"><B>C1</B></label>
+    <label id="resis6" style="font-size: 15px;color: BLACK;position: absolute;top: 107px;left: 3px;"><B>A1</B></label>
+	  </div>
+    
+    <div id="resistance7" draggable="true">
+    <img src="images/resistance1.png" id="res7" width="15px"height="45px" style="position: absolute; top: 5px; left: 4px">
+    <!--label id="resis7"style="font-size: 18px;  color: red; position: absolute; top: -82px;left:1px;">R<sub>7</sub></label-->
+    <label id="resis7" style="font-size: 18px;color: blue;position: absolute;top: 15px;left: -16px;">R<sub>7</sub></label>
+    <label id="resis7" style="font-size: 15px;color: BLACK;position: absolute;top: -70px;left: 3px;"><B>C1</B></label>
+    <label id="resis7" style="font-size: 15px;color: BLACK;position: absolute;top: 107px;left: 3px;"><B>A1</B></label>
+    </div>
+    
+   <!-- <img src="images/connector.png" id="connector1" width="50px" height="28px" style="position: absolute;  top:3px; left:430px;" >-->
+   
+
+    <div id="power1" draggable="true">
+    <img src="images/Power1.png" height="100" width="130">
+    <div class="true" id="heading1" >+V<sub>1</sub>-</div>
+    <canvas id="one" width="70" height="33" style="border: 1px solid black; background-color: black; border-radius: 4px; padding: 3px; "></canvas>
+    </div>
+
+    <div id="power2" draggable="true">
+    <img src="images/Power2.png" height="100" width="130">
+    <div class="true"id="heading2">+V<sub>2</sub>-</div>
+    <canvas id="two" width="70" height="33" style="border: 1px solid black; background-color: black;border-radius: 4px; padding: 3px; "></canvas>
+    </div>
+    
+    <div id="power3" draggable="true">
+    <img src="images/Power3.png" height="100" width="130">
+    <div class="true" id="heading3">+V<sub>3</sub>-</div>
+    <canvas id="three" width="70" height="33" style="border: 1px solid black; background-color: black;border-radius: 4px; padding: 3px; "></canvas>
+    </div>
+
+    <div id="power4" draggable="true">
+    <img src="images/ptm.png" height="100" width="80">
+    <div class="true" id="heading4">R<sub>f</sub> (Kohm) </div>
+    <div id="four" width="40" height="40" style="border: 4px; background-color: silver; border-radius: 16px; padding:5px;  border-color: #fff; height: 25px; width: 25px;"></div>
+    </div>
+    </div>
+
+
+         
+
+    <div id="supply" draggable="true"></div>
+                    
+  <div id="shape" style="visibility: hidden;">
+	<img src="images/DMM.png" width="130" height="220" style="position: absolute; top: 50px; left: 950px;">
+  </div>
+  </div>
+  <div class="bottom">
+    <button id="checkbutton" disabled > Check Connection </button>
+    <button id="startbutton" disabled>Show Output</button>
+    <button id="resetbutton" disabled onclick="resetCircuit()">Reset</button>
+    <button id="addtable" disabled=""> <b>Add to table</b></button>
+</div>
+  </div>
+
+
+<div class="right">
+  <div>
+    <button class="right_btn" id="First">Instructions</button>
+    <div class="Button-data" id="First_Data" style="display: none">
+        <div class="panel">
+            <button class="close-btn" id="close-btn"><span>&#10005</span></button>
+           <div id="first_insrt">
+            <ol type="1" style="padding: 10px;">
+                <li>Click on the component button to place the component on the table.</li>               
+                <li>Make connections as per the circuit diagram.</li>
+                <figure>
+                  <img src="images/image1ins.png" align="center">
+                  <figcaption style="text-align:center;">Fig. 1 Circuit Diagram</figcaption>
+                </figure><br/>
+                <li>Click on '<b>Check Connection</b>' button. If connections are right, use range sliders inside <b>'Components'</b> box to vary the input voltages.</li>
+                <li>Click on <b>'Show Output'</b> button to view the output on DMM.</li>
+                <li>Click on <b>'Add to table'</b> button and calculate the output voltage using the formula:<br><center><b>V<sub>o</sub> = - (V<sub>1</sub> + V<sub>2</sub> + V<sub>3</sub>)</b></center><br> to add calculations to the table.<br></li>
+            
+                </ol></div>
+
+                <div id="second_insrt" style="display: none;">
+                  <ol type="1" style="padding: 10px; ">
+                      <li>Click on the component button to place the component on the table.</li>               
+                      <li>Make connections as per the circuit diagram.</li>
+                      <figure>
+                        <img src="images/image2ins.png" align="center">
+                        <figcaption style="text-align:center;">Fig. 1 Circuit Diagram</figcaption>
+                      </figure><br/>
+                      <li>Click on '<b>Check</b>' button. If connections are right, use range sliders inside <b>'Components'</b> box to vary the input voltages.</li>
+                      <li>Click on <b>'Show Output'</b> button to view the output on DMM.</li>
+                      <li>Click on <b>'Add to table'</b> button and calculate the output voltage using the formula:<br><center><b>V<sub>o</sub> = V<sub>2</sub> - V<sub>1</sub></b></center><br> to add calculations to the table.</li>
+                 
+                      </ol></div>
+
+                      <div id="third_insrt" style="display: none;">
+                        <ol type="1" style="padding: 10px; ">
+                            <li>Click on the component button to place the component on the table.</li>               
+                            <li>Make connections as per the circuit diagram.</li>
+                            <figure>
+                              <img src="images/image4ins.png" align="center">
+                              <figcaption style="text-align:center;">Fig. 1 Circuit Diagram</figcaption>
+                            </figure><br/>
+                            <li>Click on '<b>Check</b>' button. If connections are right, use range sliders inside <b>'Components'</b> box to vary the input voltages.</li>
+                            <li>Click on <b>'Show Output'</b> button to view the output on DMM.</li>
+                            <li>Click on <b>'Add to table'</b> button and calculate the output voltage using the formula:<br><center><b>V<sub>o</sub> = - (R<sub>f</sub>/R<sub>1</sub>)*V<sub>1</sub></b></center><br> to add calculations to the table.</li>
+                        
+                            </ol></div>
+        </div>
+    </div></div>
+
+  <div id="chooseone">
+  <b>Select one of them:</b><br><br>
+  <input type="radio" id="first"  name="option" value="first" onclick="addition();">
+  <label  class="radio-input" for="first">Addition</label><br><br>
+  <input type="radio" id="second"  name="option" value="second" onclick="subtraction();">
+  <label  class="radio-input" for="second">Subtraction</label><br><br>
+  <input type="radio" id="fourth"  name="option" value="fourth" onclick="multiplication();">
+  <label  class="radio-input" for="fourth">Multiplication by constant</label><br>  <br> 
+  </div>
+        
+         
+
+  <fieldset class="Components" id="components" >
+  <legend><b style="font-size: 22px;"> Components</b></legend>    
+         
+  <button id="breadbutton" onclick="breadboard()" >Breadboard </button><br>
+  <button id="supplybutton" onclick="supply()">±15V DC Supply</button><br>
+  <button id="switchbutton">Digital multimeter</button><br>
+  <button id="ic2button" onclick="ic741()" >IC-741</button><br>
+  <button id="capbutton" > 0 to 2V Variable DC supply</button></br>
+  <button id="resistancebutton" >Resistors</button></br>
+  <input type="range" min="0" max="2" step="0.1" onchange="focus1()" value="0"  id="myrange" style="visibility: hidden;" /><p id="v1" style="visibility: hidden;"> V<sub>1</sub><br>
+  <input type="range" min="0" max="2" step="0.1" onchange="focus2()" value="0"  id="myrange1" style="visibility: hidden;"/><p id="v2" style="visibility: hidden;">V<sub>2</sub>
+  <input type="range" min="0" max="2" step="0.1" onchange="focus3()" value="0"  id="myrange2" style="visibility: hidden;"/><p id="v3" style="visibility: hidden;">V<sub>3</sub></p>
+  <input type="range" min="0" max="60" step="10"  onchange="focus5()" value="30"  id="myrange4"  style="visibility: hidden;"/><p id="v4" style="visibility: hidden;">R<sub>f</sub></p>
+  <input type="range" min="0" max="5" step="0.1" onchange="focus4()" value="0"  id="myrange3" style="visibility: hidden;"/>      
+      </fieldset> 
+
+     
+        <div style="padding: 50px 100px">
+    
+        <canvas id="display" width="86" height="29" style="border: 1px #fff; background-color: #C7E5F0; visibility: hidden;"></canvas>
+        </div>
+
+
+
+
+<table id="mytable"  cellpadding="10px" border="5px"  style="visibility: hidden;">
+<tr style="background-color: #3c8dbc">
+ <th>R<sub>1</sub> (KΩ)</th>
+ <th>R<sub>2</sub> (KΩ)</th>
+ <th>R<sub>3</sub> (KΩ)</th>
+ <th>R<sub>f</sub> (KΩ)</th>
+ <th>V<sub>1</sub> (V)</th>
+ <th>V<sub>2</sub> (V)</th>
+ <th>V<sub>3</sub> (V)</th>
+ <th>V<sub>o</sub> (V)(Theoretical)</th>
+ <th>V<sub>o</sub> (V)(Experimental)</th>
+  <th> % Error </th>
+</tr>
+</table>
+
+<table id="mytable1"  cellpadding="10px" border="5px"  style="visibility: hidden;">
+<tr style="background-color: #3c8dbc">
+ <th>R<sub>1</sub> (KΩ)</th>
+ <th>R<sub>2</sub> (KΩ)</th>
+ <th>R<sub>f</sub> (KΩ)</th>
+ <th>V<sub>1</sub> (V)</th>
+ <th>V<sub>2</sub> (V)</th>
+ <th>V<sub>o</sub> (V)(Theoretical)</th>
+ <th>V<sub>o</sub> (V)(Experimental)</th>
+ <th> % Error </th>
+</tr>
+</table>
+
+<table id="mytable2"  cellpadding="10px" border="5px"  style="visibility: hidden;">
+<tr style="background-color: #3c8dbc">
+ <th>R<sub>1</sub> (KΩ)</th>
+ <th>R<sub>f</sub> (KΩ)</th>
+ <th>V<sub>1</sub> (V)</th>
+ <th>V<sub>o</sub> (V)(Theoritical)</th>
+ <th>V<sub>o</sub> (V)(Experimental)</th>
+ <th> % Error </th>
+</tr>
+</table>
+
+<table id="mytable3"  cellpadding="10px" border="5px"  style="visibility: hidden;">
+<tr style="background-color: #3c8dbc">
+ <th>R<sub>1</sub> (KΩ)</th>
+ <th>R<sub>f</sub> (KΩ)</th>
+  <th>R<sub>f</sub>/R<sub>1</sub> </th>
+ <th>V<sub>1</sub> (V)</th>
+ <th>V<sub>o</sub>=(R<sub>F</sub>/R<sub>1</sub>)*V<sub>1</sub> (V) (Theoretical) </th>
+ <th>V<sub>o</sub> (V)(Experimental)</th>
+ <th> % Error </th>
+</tr>
+</table>
+</div> 
+<script src="js/script1.js"></script>
+<script src="js/script.js"></script>
+</div>
+<footer><b>&copy;</b> Copyright 2022 Virtual Labs, IIT Roorkee</footer>
+
 </body>
 </html>
