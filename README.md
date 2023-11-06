@@ -4,7 +4,7 @@
 <b>Discipline | <b>Electronics and Communication Engineering
 :--|:--|
 <b> Lab | <b> Analog and Digital Electronics-II
-<b> Experiment|     <b> Mathematical operations using Op-Amp
+<b> Experiment|     <b>2. Mathematical operations using Op-Amp
 
 ### About the Experiment 
 

@@ -4,10 +4,23 @@ var isstartedsimulation=false;
 var i=1;
 var sum;
 
+const check_button = document.getElementById('checkbutton');
+
+const bread_but=document.getElementById("breadbutton");
+const supply_but=document.getElementById("supplybutton");
+const switch_but=document.getElementById("switchbutton");
+const ic_but=document.getElementById("ic2button");
+const r1_but=document.getElementById("resistancebutton");
+const cap_but=document.getElementById("capbutton");
+
+
 // Components hide show code here
 function breadboard() {
     var x = document.getElementById("board");
     x.style.visibility = "visible";
+
+    bread_but.disabled=true;
+    bread_but.style.cursor="not-allowed";
 
     var instance = new BoardController();
 
@@ -235,6 +248,8 @@ function breadboard() {
 
  
     }
+
+    disabledButton();
 }
 
 
@@ -242,6 +257,9 @@ function breadboard() {
 function ic741() {
     var x = document.getElementById("ic741");
     x.style.visibility = "visible";
+
+    ic_but.disabled=true;
+    ic_but.style.cursor="not-allowed";
 
     var ic741 = new BoardController();
     ic741.setJsPlumbInstance(jsPlumb);
@@ -289,6 +307,7 @@ function ic741() {
         ic741.addEndPoint('green',4.2,1, 'ic741', 'ic741_4', 'ic741_44', [0, 0, 1, -1, 46.5, 152], 'red');
 
    }
+   disabledButton();
 }
 
 
@@ -296,6 +315,9 @@ function ic741() {
 function supply() {
     var x = document.getElementById("supply");
     x.style.visibility = "visible";
+    
+    supply_but.disabled=true;
+    supply_but.style.cursor="not-allowed";
     
     var supply = new BoardController();
     supply.setJsPlumbInstance(jsPlumb);
@@ -307,11 +329,16 @@ function supply() {
     supply.addEndPoint('green',5,1, 'supply', 'GND', 'GND', [0, 0, 0, 0,  95, 56], 'green');
     supply.addEndPoint('blue',5,1, 'supply', 'VEE', 'VEE', [0, 0, 0, 0, 139, 56], 'blue');
 }
+disabledButton();
 }
 
 function resistor1() {
     var x = document.getElementById("resistance1");
     x.style.visibility = "visible";
+
+    r1_but.disabled=true;
+   r1_but.style.cursor="not-allowed";
+
     var resistance1= new BoardController();
     resistance1.setJsPlumbInstance(jsPlumb);
     resistance1.setCircuitContainer('mid');
@@ -328,6 +355,7 @@ function resistor1() {
     resistance1.addEndPoint('green',4.2,1, 'resistance1', 'resistance1_A1', 'resistance1_A103', [0, 0, 1, -1, 11, 89], 'red');
     resistance1.addEndPoint('green',4.2,1, 'resistance1', 'resistance1_A1', 'resistance1_A104', [0, 0, 1, -1, 11, 103], 'red');
 }
+disabledButton();
 }
 
 function resistor2() {
@@ -455,6 +483,10 @@ function multimeter()
 
    var x1=  document.getElementById("shape");
   x1.style.visibility="visible";
+
+  switch_but.disabled=true;
+  switch_but.style.cursor="not-allowed";
+
   var multimeter = new BoardController();
     multimeter.setJsPlumbInstance(jsPlumb);
     multimeter.setCircuitContainer('mid');
@@ -462,7 +494,26 @@ function multimeter()
 
     multimeter.addEndPoint('red',7,1, 'shape', 'multimeter_VCC', 'multimeter_VCC1', [0, 0, 0,0, 1042, -217], 'red');
     multimeter.addEndPoint('black',7,1, 'shape', 'multimeter_GND', 'multimeter_GND1', [0, 0, 0, 0, 1010, -217], 'black');
+
+    disabledButton();
+  }
+
+function disabledButton()
+{
+
+  if(window.getComputedStyle(document.getElementById('board')).visibility === "visible" &&  window.getComputedStyle(document.getElementById('shape')).visibility === "visible" &&
+  (window.getComputedStyle(document.getElementById('power1')).visibility === "visible" || window.getComputedStyle(document.getElementById('power2')).visibility === "visible" || 
+  window.getComputedStyle(document.getElementById('power3')).visibility === "visible" || window.getComputedStyle(document.getElementById('power4')).visibility === "visible")  && window.getComputedStyle(document.getElementById('supply')).visibility === "visible" && 
+ (window.getComputedStyle(document.getElementById('resistance1')).visibility === "visible" || window.getComputedStyle(document.getElementById('resistance2')).visibility === "visible" ||
+  window.getComputedStyle(document.getElementById('resistance3')).visibility === "visible" || window.getComputedStyle(document.getElementById('resistance4')).visibility === "visible" ||
+   window.getComputedStyle(document.getElementById('resistance5')).visibility === "visible" || window.getComputedStyle(document.getElementById('resistance6')).visibility === "visible" ||
+   window.getComputedStyle(document.getElementById('resistance7')).visibility === "visible")&& window.getComputedStyle(document.getElementById('ic1')).visibility === "visible" )
+  { 
+    console.log('pragyaaaa');
+     check_button.disabled=false; 
+  }
 }
+
 function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
 }
@@ -521,7 +572,7 @@ close_btn.addEventListener('click', () => {
    resistor2();
    resistor3();
    resistor4();
-   document.getElementById("checkbutton").disabled=false;
+  // document.getElementById("checkbutton").disabled=false;
 });
  
   
@@ -542,6 +593,10 @@ close_btn.addEventListener('click', () => {
    one.setValue("0");
    two.setValue("0");
    three.setValue("0");
+
+   cap_but.disabled=true;
+   cap_but.style.cursor="not-allowed";
+
    var c= document.getElementById("myrange2");
    c.style.visibility="visible";
    var b= document.getElementById("myrange1");
@@ -557,6 +612,7 @@ close_btn.addEventListener('click', () => {
    showfirst();
    showsecond();
    showthird();
+   disabledButton();
 });
        document.getElementById("addtable").addEventListener("click", function(){
  var v= document.getElementById("mytable");
@@ -596,6 +652,10 @@ close_btn.addEventListener('click', () => {
    var x= document.getElementById("components");
    x.style.visibility="visible";
     document.getElementById("resistancebutton").addEventListener("click", function(){
+
+      r1_but.disabled=true;
+      r1_but.style.cursor="not-allowed";
+
   	document.getElementById("resis6").innerHTML="R" +str.sub();
   	document.getElementById("resis4").innerHTML="R<sub>1</sub>" ;
   	document.getElementById("resis5").innerHTML="R<sub>2</sub>" ;
@@ -604,13 +664,18 @@ close_btn.addEventListener('click', () => {
     resistor5();
     resistor6();
     resistor7();
-    document.getElementById("checkbutton").disabled=false;
+    disabledButton();
+   // document.getElementById("checkbutton").disabled=false;
 });
  
   
   document.getElementById("capbutton").addEventListener("click", function(){
     one.setValue("0");
     two.setValue("0");
+
+    cap_but.disabled=true;
+    cap_but.style.cursor="not-allowed";
+
     var h= document.getElementById("v2");
    h.style.visibility="visible";
     var c= document.getElementById("myrange");
@@ -621,6 +686,7 @@ close_btn.addEventListener('click', () => {
    f.style.visibility="visible";
     showfirst();
    showsecond();
+   disabledButton();
 });
    document.getElementById("checkbutton").addEventListener("click", function(){
    checkCircuit2();
@@ -680,9 +746,12 @@ close_btn.addEventListener('click', () => {
    x.style.visibility="visible";
      document.getElementById("resistancebutton").addEventListener("click", function(){
   	
+      r1_but.disabled=true;
+      r1_but.style.cursor="not-allowed";
+
   	document.getElementById("resis4").innerHTML="R<sub>1</sub>" ;
   	document.getElementById("resis2").innerHTML="R<sub>2</sub>" ;
-    document.getElementById("checkbutton").disabled=false;
+    //document.getElementById("checkbutton").disabled=false;
      
  var slider=document.getElementById("myrange4").value;
    
@@ -699,6 +768,7 @@ close_btn.addEventListener('click', () => {
      var l= document.getElementById("v4");
    l.style.visibility="visible";
 
+   disabledButton();
 });
       document.getElementById("switchbutton").addEventListener("click", function(){
    multimeter();
@@ -706,7 +776,10 @@ close_btn.addEventListener('click', () => {
 }); 
      document.getElementById("capbutton").addEventListener("click", function(){
    two.setValue("0");
-  
+
+   cap_but.disabled=true;
+   cap_but.style.cursor="not-allowed";
+
    var e= document.getElementById("myrange3");
    e.style.visibility="visible";
   
@@ -716,6 +789,8 @@ close_btn.addEventListener('click', () => {
    document.getElementById('v2').innerHTML = "V<sub>1</sub>"; 
   showsecond();
   document.getElementById("heading2").innerHTML="+V<sub>1</sub>-";
+
+  disabledButton();
 });
       document.getElementById("startbutton").addEventListener("click", function(){
    var d=document.getElementById("display");

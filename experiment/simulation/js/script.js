@@ -193,7 +193,15 @@ function checkCircuit1() {
         g.addEdge(connections[key].endpoints[0].getParameter('groupName'), connections[key].endpoints[1].getParameter('groupName'));
     }
    
-   
+    var edges= (g.numberofedges);
+    console.log('edges:'+edges)
+    if(edges == 0)
+    {
+        alert("No connections present.");   
+        return;
+    }
+
+
     if(g.isConnected("ic741_7","VCC")){
         console.log("IC 741 connected to supply");
        
@@ -270,7 +278,13 @@ function checkCircuit2() {
         g.addEdge(connections[key].endpoints[0].getParameter('groupName'), connections[key].endpoints[1].getParameter('groupName'));
     }
    
-    
+    var edges= (g.numberofedges);
+    console.log('edges:'+edges)
+    if(edges == 0)
+    {
+        alert("No connections present.");   
+        return;
+    }
 
     if(g.isConnected("ic741_7","VCC")){
         console.log("IC 741 connected to supply");
@@ -343,7 +357,14 @@ function checkCircuit4() {
         g.addEdge(connections[key].endpoints[0].getParameter('groupName'), connections[key].endpoints[1].getParameter('groupName'));
     }
    
-    
+    var edges= (g.numberofedges);
+console.log('edges:'+edges)
+if(edges == 0)
+{
+    alert("No connections present.");   
+    return;
+}
+
 
     if(g.isConnected("ic741_7","VCC")){
         console.log("IC 741 connected to supply");
