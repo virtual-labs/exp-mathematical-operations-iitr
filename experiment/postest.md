@@ -21,7 +21,7 @@ D  None of the above
   
 Q3. What will be the output of given circuit when V<sub>1</sub> = 4V and V<sub>2</sub> = 2V?
  
-<img src='images/que3.png' />  
+<img src="images/que3.png">  
 
 <b>A  \-2 V</b>  
 B  2 V  
