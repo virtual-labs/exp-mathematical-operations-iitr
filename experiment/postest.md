@@ -21,7 +21,7 @@ D  None of the above
   
 Q3. What will be the output of given circuit when V<sub>1</sub> = 4V and V<sub>2</sub> = 2V?
  
-![](images/que3.png)  
+<img src='images/que3.png' />  
 
 <b>A  \-2 V</b>  
 B  2 V  
@@ -40,7 +40,7 @@ D  3.0 V
   
 
 Q5. Find the output voltage of a differentiator circuit consisting of a resistor of 1 kΩ and a capacitor of 0.1µF if input varies from 0V to 5V in 0.1 ms.  
-![](images/que5.png)  
+<img src='images/que5.png' />
 
 <b>A  \-5 V</b>  
 B  5 V  
@@ -50,7 +50,7 @@ D  5.5 V
 
 
 Q6. Determine the critical frequency for the integrator circuit shown in figure.  
-![](images/que6.png)  
+<img src='images/que6.png' />
 
 A  100 Hz  
 B  232 Hz  
@@ -69,7 +69,7 @@ D  20 Hz
 
 
 Q8. Calculate the output voltage shown in the figure below for R<sub>f</sub> =68 kΩ.  
-![](images/que8.png)  
+<img src='images/que8.png' />
 
 A  3.38 V  
 B  \-3.68 V  
@@ -79,7 +79,7 @@ D  3.52 V
 
 
 Q9. What output voltage results in the circuit of the figure given below for V<sub>1</sub> =+0.5V  
-![](images/que9.png)  
+<img src='images/que9.png' />
 
 <b>A  0.5 V</b>  
 B  1.5 V  
@@ -89,7 +89,7 @@ D  2.0 V
 
 
 Q10. Calculate the output voltage for the circuit of given figure. The input are V<sub>1</sub> = 50 sin(1000 t) mV and V<sub>2</sub>= 10 sin(3000 t) mV  
-![](images/que10.png)  
+<img src='images/que10.png' />  
 
 <b>A  –\[0.5 sin(1000 t) +0.33 sin(3000 t)\]</b>  
 B  \[0.5 sin(1000 t) +0.33 sin(3000 t)\]  
