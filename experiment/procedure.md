@@ -11,7 +11,7 @@
 
 ### **A. Addition**
 
-**1.** Click on the component button to place the component on the table.  
+**1.** Click on the components button to place the component on the table.  
 **2**. Make connections as per the circuit diagram or connection table.
 <div style="text-align:center">  
 
@@ -29,7 +29,7 @@
 
 ### **B. Subtraction**
 
-**1.** Click on the component button to place the component on the table.  
+**1.** Click on the components button to place the component on the table.  
 **2**. Make connections as per the circuit diagram or connection table.
 <div style="text-align:center">    
 
@@ -47,7 +47,7 @@
 
 ### **C. Multiplication by constant ( and Division when Rf < Ri)**
 
-**1.** Click on the component button to place the component on the table.  
+**1.** Click on the components button to place the component on the table.  
 <div style="text-align:center"> 
   
 ![](images/board.png "Breadbord")&emsp; ![](images/supply.png "Power Supply")&emsp; ![](images/multimeter.png "Multimeter")&emsp; ![](images/IC1.png "IC")&emsp; ![](images/power1.png "Variable DC Supply")&emsp; ![](images/resistance2.1.png "30KΩResistor")&emsp; ![](images/resistance1.1.png "30KΩResistor")&emsp; ![](images/resistance3.png "Feedback resistor")  
