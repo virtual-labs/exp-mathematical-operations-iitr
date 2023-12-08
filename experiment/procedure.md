@@ -1,4 +1,4 @@
-## Procedure<br>
+
 #### Familiarise with components
 <div style="text-align:justify">
 
